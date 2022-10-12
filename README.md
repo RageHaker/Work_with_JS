@@ -43,7 +43,7 @@
     </Grid>
 </Window>
    ```
-> C# code
+> * C# code
   ```c#
   using System;
 using System.Collections.Generic;
@@ -111,8 +111,8 @@ namespace Work_with_JS
     }
 }
   ```
-> Create ne catalog and create ConnecToDB
-> Code ConnectToDB
+> * Create ne catalog and create ConnecToDB
+> * Code ConnectToDB
   ```C#
   using System;
 using System.Collections.Generic;
