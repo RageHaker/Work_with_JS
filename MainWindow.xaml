@@ -1,0 +1,37 @@
+﻿<Window x:Class="Work_with_JS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Work_with_JS"
+        mc:Ignorable="d"
+        Title="Work with JSON" Height="600" Width="800">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel Height="100" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Width="120" Height="40" Click="SaveasJS">Save as .json</Button>
+                    <TextBox Width="200" x:Name="txtSearch" Height="50" FontSize="30" Margin="15"></TextBox>
+                    <Button Width="120" Height="40" Click="Search_JS">Search</Button>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="1*"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="1" x:Name="DGOrder" AutoGenerateColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Width="200" Header="Дата заказа" Binding="{Binding OrderDate}"/>
+                            <DataGridTextColumn Width="200" Header="Дата доставки заказа" Binding="{Binding OrderDeliveryDate}"/>
+                            <DataGridTextColumn Width="200" Header="Код" Binding="{Binding Code}"/>
+                            <DataGridTextColumn Width="200" Header="Статус" Binding="{Binding OrderStatus}"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
